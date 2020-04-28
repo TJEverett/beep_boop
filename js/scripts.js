@@ -55,3 +55,13 @@ var collection = function(number) {
   var outputString = arrayStrings.join(", ");
   return outputString;
 };
+
+$(document).ready(function(){
+  $("form#counter").submit(function(event){
+    event.preventDefault();
+    var endNumber = parseInt($("input#endNumber").val());
+    var output = collection(endNumber);
+    $("#response p").text(output);
+    $("#response").show();
+  });
+});
