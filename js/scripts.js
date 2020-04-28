@@ -35,7 +35,7 @@ var checkTwo = function(array) {
   return array;
 };
 
-var checkThree = function(array){
+var checkThree = function(array) {
   for (var index = 0; index < array.length; index++) {
     for (var i = 0; i < array[index].length; i++) {
       if (array[index][i] === "3") {
@@ -44,4 +44,14 @@ var checkThree = function(array){
     };
   };
   return array;
+};
+
+var collection = function(number) {
+  var arrayNumbers = counting(number);
+  var arrayStrings = stringify(arrayNumbers);
+  arrayStrings = checkThree(arrayStrings);
+  arrayStrings = checkTwo(arrayStrings);
+  arrayStrings = checkOne(arrayStrings);
+  var outputString = arrayStrings.join(", ");
+  return outputString;
 };
