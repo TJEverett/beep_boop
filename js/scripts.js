@@ -6,6 +6,13 @@ var counting = function(number) {
   return arrayNumbers;
 };
 
+var stringify = function(array) {
+  for (var index = 0; index < array.length; index++) {
+    array[index] = array[index].toString();
+  };
+  return array;
+};
+
 var checkOne = function(array) {
   for (var index = 0; index < array.length; index++) {
     for (var i = 0; i < array[index].length; i++) {
